@@ -11,8 +11,6 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    list-style-type: none;
-    margin-top: 0;
 }
 
 body {
@@ -21,23 +19,55 @@ body {
 }
 
 section {
-    margin-bottom: 10rem;
+    margin-bottom: 10px;
 }
 
-header li {
-    padding: 2rem 5rem 0rem 0rem;
-    align-items: center;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-header ul {
-    background-color: var(--corheader);
-    color: #fff;
-    font-size: 1.3rem;
+/* HEADER */
+
+header {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end; 
-    height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--corheader);
+    color: white;
 }
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style-type: none;
+    font-size: 1.3rem;
+    margin-left: 40px;
+    color: white;
+}
+
+/* MAIN */
+
+/* H */
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    color: var(--corh3);
+}
+
+h4 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* HOME */
 
 .home {
     display: grid;
@@ -48,8 +78,11 @@ header ul {
     margin-top: 40px;
 }
 
-.home-img {
+.home-img, .foto-programando {
     width: 50%;
+}
+
+.home-img {
     margin-left: 200px;
 }
 
@@ -58,14 +91,6 @@ header ul {
     margin-left: 250px;
     width: 500px;
     font-size: 1rem;
-}
-
-h1 {
-    text-align: center;
-}
-
-h3 {
-    color: var(--corh3);
 }
 
 button {
@@ -83,10 +108,48 @@ button {
     justify-content: flex-end;
 }
 
+/* SOBRE */
 
+.sobre, .card {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.conteudo {
+    width: 70%;
+}
+
+.button-cv {
+    margin-top: 20px;
+}
+
+/* CARDS */
+
+.card-frontend, .card-backend {
+    background-color: var(--corcard);
+    width: 60%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
+
+.progresso {
+    width: 340px;
+    height: 8px;
+    background: var(--corh3);
+    border-radius: 10px;
+    margin: -10px 0 5px 10px;
+}
 
 /* ICONS */
 
-.fa-paper-plane {
+.fa-paper-plane, .fa-download {
     margin-left: 10px;
 }

@@ -10,13 +10,14 @@
 </head>
 <body>
     <header>
+        <p>Logo</p>
         <nav>
-            <ul class="header-lista">
-                <li>Home</li>
-                <li>Sobre</li>
-                <li>Habilidades</li>
-                <li>Projetos</li>
-                <li>Contatos</li>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Sobre</a></li>
+                <li><a href="/">Habilidades</a></li>
+                <li><a href="/">Projetos</a></li>
+                <li><a href="/">Contatos</a></li>
             </ul>
         </nav>
     </header>
@@ -39,66 +40,78 @@
 
         </section>
 
+
+        <h1>SOBRE</h1>
         <section class="sobre">
-            <div class="sobre-titulo">
-                <h1>SOBRE</h1>
+            <div class="conteudo">
+                <div class="conteudo-sobre grid">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur auctor dolor quis tincidunt. Praesent eu consequat ante, nec tristique sapien. Duis fermentum nulla sed consectetur finibus.</p>
+                </div>
+                <button class="button-cv">Baixar CV<i class="fa-solid fa-download"></i></button>
             </div>
-            <div class="conteudo-sobre grid">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur auctor dolor quis tincidunt. Praesent eu consequat ante, nec tristique sapien. Duis fermentum nulla sed consectetur finibus.</p>
-            </div>
-            <button class="button-cv">Baixar CV<i class="fa-solid fa-arrow-down-to-bracket"></i></button>
             <div class="img-programando grid">
-                <img class="foto-programando" src="">
+                <a href='https://br.freepik.com/fotos-vetores-gratis/css'><img class="foto-programando" src="img/sobre.jpg"></a>
             </div>
         </section>
 
-        <section>
-            <div class="card-frontend grid">
-                <div class="row">
+        <h1>HABILIDADES</h1>
+        <section class="card">
+            <div class="card-frontend">
+                <h4>Front-end</h4>
+                <label for="">
                     <div class="column">
-                        <p>HTML</p>
+                        <div class="row">
+                            <p>HTML</p>
+                            <p class="percentual">90%</p>
+                        </div>
+                        <div class="progresso"></div>
                     </div>
-                    <p class="percentual">90%</p>
-                    <div class="progresso"></div>
+
                     <div class="column">
-                        <p>CSS</p>
+                        <div class="row">
+                            <p>CSS</p>
+                            <p class="percentual">90%</p>
+                        </div>
+                        <div class="progresso"></div>
                     </div>
-                    <p class="percentual">90%</p>
+
                     <div class="column">
-                    <div class="progresso"></div>
-                        <p>JavaScript</p>
-                    </div> 
-                    <p class="percentual">40%</p>
+                        <div class="row">
+                            <p>JavaScript</p>
+                            <p class="percentual">40%</p>
+                        </div> 
+                        <div class="progresso"></div>
+                    </div>
+
                     <div class="column">
-                    <div class="progresso"></div>
-                        <p>Bootstrap</p>
-                    </div> 
-                    <p class="percentual">50%</p>
+                        <div class="row">
+                            <p>Bootstrap</p>
+                            <p class="percentual">50%</p>
+                        </div> 
+                        <div class="progresso"></div>
+                    </div>
+
                     <div class="column">
-                    <div class="progresso"></div>
-                        <p>Wordpress</p>
-                    </div> 
-                    <p class="percentual">50%</p>
-                    <div class="progresso"></div>
-                </div>
+                        <div class="row">
+                            <p>Wordpress</p>
+                            <p class="percentual">50%</p>
+                        </div> 
+                        <div class="progresso"></div>
+                    </div>
+
+                </label>
             </div>
-            <div class="card-backend grid">
-                <div class="row">
+            <div class="card-backend">
+                <h4>Back-end</h4>
+                <label for="">
                     <div class="column">
-                        <div class="progresso"></div>
+                        <div class="row">
                             <p>Python</p>
-                        </div> 
-                        <p class="percentual">35%</p>
+                            <p class="percentual">90%</p>
+                        </div>
                         <div class="progresso"></div>
                     </div>
-                    <div class="column">
-                        <div class="progresso"></div>
-                            <p>Ruby</p>
-                        </div> 
-                        <p class="percentual">20%</p>
-                        <div class="progresso"></div>
-                    </div>
-                </div>
+                </label>
             </div>
         </section>
 
