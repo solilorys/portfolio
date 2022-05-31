@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* VARIAVEL NO CSS */
+:root {
+    --corheader: #31081F;
+    --corh3:#FF85A1;
+    --corcard:#FAE0E4;
+    --corbutton: #FF99AC;
+    --corinput: #F7CAD0;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--corheader);
+    color: white;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style-type: none;
+    font-size: 1.3rem;
+    margin-left: 40px;
+    color: white;
+}
+
+/* MAIN */
+
+/* H */
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    color: var(--corh3);
+}
+
+h4 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* HOME */
+
+.home {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.grid {
+    margin-top: 40px;
+}
+
+.home-img, .foto-programando {
+    width: 50%;
+}
+
+.home-img {
+    margin-left: 200px;
+}
+
+.home-text {
+    margin-top: 100px;
+    margin-left: 250px;
+    width: 500px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--corbutton);
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.home-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* SOBRE */
+
+.sobre, .card {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.conteudo {
+    width: 70%;
+}
+
+.button-cv {
+    margin-top: 20px;
+}
+
+/* CARDS */
+
+.card-frontend, .card-backend {
+    background-color: var(--corcard);
+    width: 60%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
+
+.progresso {
+    position: relative;
+    width: 93%;
+    height: 8px;
+    background: var(--corinput);
+    border-radius: 10px;
+    margin: -10px 0 5px 10px;
+}
+
+.progresso span {
+    width: 90%;
+    height: 100%;
+    background: var(--corh3);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.progresso-html span {
+    width: 90%;
+}
+.progresso-css span {
+    width: 90%;
+}
+.progresso-js span {
+    width: 30%;
+}
+.progresso-bt span {
+    width: 50%;
+}
+.progresso-wordpress span {
+    width: 50%;
+}
+.progresso-python span {
+    width: 40%;
+}
+
+/* QUALIFICACOES */
+
+.qualificacoes-tabs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.qualificacao-button {
+    cursor: pointer;
+}
+
+.qualificacao-button:hover {
+    color: var(--corbutton);
+}
+
+.qualificacao-educacao {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+
+/* ICONS */
+
+.fa-paper-plane, .fa-download {
+    margin-left: 10px;
+}
