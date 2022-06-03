@@ -115,65 +115,90 @@
             </div>
         </section>
 
-        <section class="qualificacoes">
-            <h1>Qualificações</h3>
-            <div class="qualificacoes-tabs">
-                <div class="qualificacao-button">
-                    <i class="fa-solid fa-building-columns"></i>Educação
+        <section class="qualificacao">
+            <h1 class="section-title">Qualificações</h1>
+    
+            <div class="qualificacao-container container">
+                <div class="qualificacao-tabs">
+                    <div class="qualificacao-button qualificacao-ativa" data-target='#educacao'>
+                        <i class="fa-solid fa-building-columns qualificacao-icon"></i>Educação
+                    </div>
+    
+                    <div class="qualificacao-button" data-target='#trabalho'>
+                        <i class="fa-solid fa-briefcase qualificacao-icon"></i>Trabalhos
+                    </div>
                 </div>
-                <div class="qualificacao-button">
-                    <i class="fa-solid fa-briefcase"></i>Trabalhos
-                </div>
+    
+                    <div class="qualificacao-sections">
+                        <div class="qualificacao-content qualificacao-ativa" data-content id="educacao">
+                            <div class="qualificacao-data">
+                                <div class="qualificacao-text">
+                                    <h4 class="qualificacao-title">Sistemas de Informação</h4>
+                                    <span class="qualificacao-subtitle">Centro Universitário Paraíso - Brasil</span>
+                                    <div class="qualificacao-calendario">
+                                        <i class="fa-solid fa-calendar-days"></i>2021 - 2024
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualificacao-bolinha"></span>
+                                    <span class="qualificacao-linha"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qualificacao-content" data-content id="trabalho">
+                            <div class="qualificacao-data">
+    
+                                <div class="qualificacao-text">
+                                    <h4 class="qualificacao-title">Desenvolvedora Frontend</h4>
+                                    <span class="qualificacao-subtitle">Centro Universitário Paraíso - Brasil</span>
+                                    <div class="qualificacao-calendario">
+                                        <i class="fa-solid fa-calendar-days"></i>2022 - o momento
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualificacao-bolinha"></span>
+                                    <span class="qualificacao-linha"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
-
-                <div class="qualificacao-educação">
-                    <div>
-                        <h3 class="educacao-title">Sistemas de Informação</h3>
-                        <span class="educacao-sub">Brasil - Centro Universitário Paraíso</span>
-                    </div>
-                    <div class="icon-calendario">
-                        <i class="fa-solid fa-calendar-days"></i>2021 - 2024
-                    </div>
-                </div>
-
-                <div class="qualificacao-trabalhos">
-                    <div>
-                        <h3 class="trabalho-title">Desenvolvedora Frontend</h3>
-                        <span class="trabalho-sub">Centro Universitário Paraíso - Brasil</span>
-                    </div>
-                    <div class="icon-calendario">
-                        <i class="fa-solid fa-calendar-days"></i>2021 - O momento
-                    </div>
-                </div>
         </section>
 
         <section>
             <div class="projetos">
-        
+                
             </div>
         </section>
 
         <section class="contato">
-            <div class="contato-esquerdo">
-                <h2>Contate-me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur auctor dolor quis tincidunt. Praesent eu consequat ante, nec tristique sapien. Duis fermentum nulla sed consectetur finibus.</p>
-                <div class="img-icons">
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-github-square"></i></a>
-                    <a href=""><i class="fa-brands fa-whatsapp-square"></i></a>
+            <div class="contato-container">
+                <div class="contato-text">
+                    <h2>Contate-me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur auctor dolor quis tincidunt. Praesent eu consequat ante, nec tristique sapien. Duis fermentum nulla sed consectetur finibus.</p>
+                    <div class="contato-icon">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github-square"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp-square"></i></a>
+                    </div>
                 </div>
-            </div>
+
             <form>
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome"><br>
-                <label for="email">E-mail:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="assunto">Assunto:</label><br>
-                <input type="text" id="assunto" name="assunto"><br>
-                <label for="mensagem">Mensagem:</label><br>
-                <input type="text" id="mensagem" name="mensagem"><br>
+                <label for="nome"></label><br>
+                <input type="text" id="nome" name="nome" placeholder="Nome"><br>
+                <label for="email"></label><br>
+                <input type="email" id="email" name="email" placeholder="E-mail"><br>
+                <label for="assunto"></label><br>
+                <input type="text" id="assunto" name="assunto" placeholder="Assunto"><br>
+                <label for="mensagem"></label><br>
+                <input type="text" id="mensagem" name="mensagem" placeholder="Mensagem"><br>
+                <button class="button-enviar">Enviar</button>
             </form>
-            <button class="button-enviar">Enviar</button>
+            </div>
+            
         </section>
     </main>
     <footer>
@@ -193,7 +218,27 @@
         </div>
     </footer>
     <p/&copy; 2022 Laryssa Brilhante/>
-
+    
+<script>
+        const tabs = document.querySelectorAll('[data-target]'),
+        tabContents = document.querySelectorAll('[data-content]')
+    
+    tabs.forEach(tab =>{
+        tab.addEventListener('click', () =>{
+            const target = document.querySelector(tab.dataset.target)
+    
+            tabContents.forEach(tabContent =>{
+                tabContent.classList.remove('qualificacao-ativa')
+            })
+            target.classList.add('qualificacao-ativa')
+    
+            tabs.forEach(tab =>{
+                tab.classList.remove('qualificacao-ativa')
+            })
+            tab.classList.add('qualificacao-ativa')
+        })
+    })
+</script>
 
 </body>
 </html>
