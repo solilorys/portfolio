@@ -1,12 +1,14 @@
+/*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* VARIAVEL NO CSS */
+/*==================== VARIAVEIS ====================*/
 :root {
     --corheader: #31081F;
-    --corh3:#FF85A1;
+    --corh:#FF85A1;
     --corcard:#FAE0E4;
     --corbutton: #FF99AC;
     --corinput: #F7CAD0;
+    --corplaceholder: #989090;
 }
 
 * {
@@ -27,7 +29,7 @@ a {
     color: white;
 }
 
-/* HEADER */
+/*==================== HEADER ====================*/
 
 header {
     display: flex;
@@ -52,14 +54,14 @@ header {
 
 /* MAIN */
 
-/* H */
+/*==================== H ====================*/ 
 
 h1 {
     text-align: center;
 }
 
 h3 {
-    color: var(--corh3);
+    color: var(--corh);
 }
 
 h4 {
@@ -67,7 +69,7 @@ h4 {
     font-size: 1rem;
 }
 
-/* HOME */
+/*==================== HOME ====================*/
 
 .home {
     display: grid;
@@ -80,6 +82,10 @@ h4 {
 
 .home-img, .foto-programando {
     width: 50%;
+}
+
+.home-blob-img {
+    width: 120px;
 }
 
 .home-img {
@@ -108,7 +114,7 @@ button {
     justify-content: flex-end;
 }
 
-/* SOBRE */
+/*==================== SOBRE ====================*/
 
 .sobre, .card {
     display: grid;
@@ -125,7 +131,7 @@ button {
     margin-top: 20px;
 }
 
-/* CARDS */
+/*==================== CARDS ====================*/
 
 .card-frontend, .card-backend {
     background-color: var(--corcard);
@@ -141,15 +147,170 @@ button {
 }
 
 .progresso {
-    width: 340px;
+    position: relative;
+    width: 93%;
     height: 8px;
-    background: var(--corh3);
+    background: var(--corinput);
     border-radius: 10px;
     margin: -10px 0 5px 10px;
 }
 
-/* ICONS */
+.progresso span {
+    width: 90%;
+    height: 100%;
+    background: var(--corh);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.progresso-html span {
+    width: 90%;
+}
+.progresso-css span {
+    width: 90%;
+}
+.progresso-js span {
+    width: 30%;
+}
+.progresso-bt span {
+    width: 50%;
+}
+.progresso-wordpress span {
+    width: 50%;
+}
+.progresso-python span {
+    width: 40%;
+}
+
+/*==================== QUALIFICACOES ====================*/
+
+.qualificacao-tabs {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+}
+
+.qualificacao-button {
+    cursor: pointer;
+    margin: 0rem 2rem 2rem;
+}
+
+.qualificacao-button:hover {
+    color: var(--corbutton);
+}
+
+.qualificacao-icon {
+    margin-right: 20px;
+}
+
+.qualificacao-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.qualificacao-text {
+    margin-left: 500px;
+    width: 30%;
+}
+
+.qualificacao-subtitle {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--corh);
+}
+
+.qualificacao-calendario {
+    color: var(--corh);
+}
+
+.qualificacao-bolinha {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--corbutton);
+    border-radius: 50%;
+}
+
+.qualificacao-linha {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.689);
+    transform: translate(6px, -7px);
+}
+
+.qualificacao [data-content]{
+    display: none;
+}
+
+.qualificacao-ativa[data-content]{
+    display: block;
+}
+
+/*==================== PROJETOS ====================*/
+
+/*==================== CONTATE ME ====================*/
+
+.contato {
+    margin-top: 5rem;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contato-text {
+    width: 30%;
+}
+
+.contato-icon {
+    display: flex;
+    justify-content: space-around;
+}
+
+form input {
+    background-color: var(--corinput);
+    height: 45px;
+    width: 500px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+form input::placeholder {
+    color: var(--corplaceholder);
+}
+
+form button {
+    margin-top: 10px;
+    position: relative;
+    left: 360px;
+}
+
+#mensagem {
+    height: 200px;
+}
+
+/*==================== FOOTER ====================*/
+
+footer {
+    background-color: var(--corheader);
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+/*==================== ICONS ====================*/
 
 .fa-paper-plane, .fa-download {
     margin-left: 10px;
+}
+
+.fa-calendar-days {
+    position: relative;
+    right: 3%;
 }
