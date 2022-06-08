@@ -20,6 +20,10 @@ body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 section {
     margin-bottom: 10px;
 }
@@ -80,6 +84,12 @@ h4 {
     margin-top: 40px;
 }
 
+/*
+.home-img {
+    margin-left: 120px;
+}
+*/
+
 .home-img, .foto-programando {
     width: 50%;
 }
@@ -87,18 +97,14 @@ h4 {
 .home-blob-img {
     width: 120px;
 }
-
-.home-img {
-    margin-left: 200px;
-}
-
+/*
 .home-text {
     margin-top: 100px;
     margin-left: 250px;
     width: 500px;
     font-size: 1rem;
 }
-
+*/
 button {
     background-color: var(--corbutton);
     border: none;
@@ -120,7 +126,7 @@ button {
     display: grid;
     grid-template-columns: 2fr 2fr;
     align-items: center;
-    margin-left: 300px;
+   /* margin-left: 300px;*/
 }
 
 .conteudo {
@@ -163,19 +169,13 @@ button {
     border-radius: 10px;
 }
 
-.progresso-html span {
-    width: 90%;
-}
-.progresso-css span {
+.progresso-html span, .progresso-css span {
     width: 90%;
 }
 .progresso-js span {
     width: 30%;
 }
-.progresso-bt span {
-    width: 50%;
-}
-.progresso-wordpress span {
+.progresso-bt span, .progresso-wordpress span {
     width: 50%;
 }
 .progresso-python span {
@@ -192,27 +192,31 @@ button {
 
 .qualificacao-button {
     cursor: pointer;
+    /*
     margin: 0rem 2rem 2rem;
+    */
 }
 
 .qualificacao-button:hover {
     color: var(--corbutton);
 }
 
+
 .qualificacao-icon {
-    margin-right: 20px;
+    margin-right: 10px;
 }
+
 
 .qualificacao-data {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
+/*
 .qualificacao-text {
     margin-left: 500px;
     width: 30%;
 }
-
+*/
 .qualificacao-subtitle {
     display: inline-block;
     margin-bottom: 10px;
@@ -252,18 +256,18 @@ button {
 /*==================== CONTATE ME ====================*/
 
 .contato {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .contato-container {
     display: flex;
     justify-content: space-evenly;
 }
-
+/*
 .contato-text {
     width: 30%;
 }
-
+*/
 .contato-icon {
     display: flex;
     justify-content: space-around;
@@ -272,7 +276,6 @@ button {
 form input {
     background-color: var(--corinput);
     height: 45px;
-    width: 500px;
     border: none;
     border-radius: 5px;
     padding-left: 10px;
@@ -285,8 +288,10 @@ form input::placeholder {
 
 form button {
     margin-top: 10px;
+    /*
     position: relative;
     left: 360px;
+    */
 }
 
 #mensagem {
@@ -298,10 +303,14 @@ form button {
 footer {
     background-color: var(--corheader);
     color: #fff;
+}
+
+.footer, .footer-copy {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    margin: 0;
 }
 
 /*==================== ICONS ====================*/
@@ -313,4 +322,40 @@ footer {
 .fa-calendar-days {
     position: relative;
     right: 3%;
+}
+
+/*==================== REPONSIVIDADE/MEDIAQUERY ====================*/
+
+@media(max-width: 600px) {
+    /*==================== HOME ====================*/
+    .home, .home-button, .sobre, .card, .contato-container, .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    /*==================== CARD ====================*/
+    .card-frontend, .card-backend {
+        width: 90%;
+        margin-top: 2rem;
+    }
+    .progresso span{
+        display: block;
+    }
+    /*==================== QUALIFICACOES ====================*/
+    .qualificacao-tabs {
+        justify-content: space-evenly;
+        font-size: 1em;
+    }
+    .qualificacao-text, .footer-copy {
+        text-align: center;
+    }
+    /*==================== CONTATE ME ====================*/
+    form input {
+        width: 240px;
+    }
+    /*==================== FOOTER ====================*/
+    .footer {
+        font-size: 1rem;
+    }
 }
