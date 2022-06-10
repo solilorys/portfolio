@@ -11,21 +11,14 @@
     --corplaceholder: #989090;
 }
 
-* {
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-section {
-    margin-bottom: 10px;
 }
 
 a {
@@ -84,11 +77,10 @@ h4 {
     margin-top: 40px;
 }
 
-/*
 .home-img {
-    margin-left: 120px;
+    width: 30%;
 }
-*/
+
 
 .home-img, .foto-programando {
     width: 50%;
@@ -122,21 +114,27 @@ button {
 
 /*==================== SOBRE ====================*/
 
-.sobre, .card {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
+.sobre /*, .card*/ {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     align-items: center;
    /* margin-left: 300px;*/
 }
-
-.conteudo {
+/*
+.text {
     width: 70%;
 }
+
+.foto-programando {
+    width: 20%;
+}
+
 
 .button-cv {
     margin-top: 20px;
 }
-
+*/
 /*==================== CARDS ====================*/
 
 .card-frontend, .card-backend {
@@ -326,13 +324,16 @@ footer {
 
 /*==================== REPONSIVIDADE/MEDIAQUERY ====================*/
 
-@media(max-width: 600px) {
+@media(max-width: 767px) {
     /*==================== HOME ====================*/
     .home, .home-button, .sobre, .card, .contato-container, .footer {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    .sobre-img {
+        display: none;
     }
     /*==================== CARD ====================*/
     .card-frontend, .card-backend {
@@ -357,5 +358,77 @@ footer {
     /*==================== FOOTER ====================*/
     .footer {
         font-size: 1rem;
+    }
+}
+
+@media(min-width: 768px) {
+    /*==================== HOME ====================*/
+    .home, .sobre {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .home-text, .home-img, .sobre-img {
+        width: 40%;
+    }
+    /*==================== SOBRE ====================*/
+    .sobre-text {
+        width: 80%;
+    }
+    /*==================== CARD ====================*/
+    .card {
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+        margin-left: 30px;
+    }
+    .card-frontend, .card-backend {
+        margin-left: 20px;
+    }
+    /*==================== QUALIFICACOES ====================*/
+    .qualificacao-tabs {
+        justify-content: space-evenly;
+        font-size: 1.2em;
+    }
+    .qualificacao-text, .footer-copy {
+        text-align: center;
+    }
+    /*==================== CONTATE ME ====================*/
+    .contato-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 70%;
+        margin-left: 7rem;
+    }
+    form input {
+        width: 100%;
+    }
+}
+
+@media(min-width: 1280px) {
+    .home, .sobre {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .home-img, .sobre-img {
+        width: 25%;
+    }
+    /*==================== SOBRE ====================*/
+    .sobre-text, .contato-text {
+        width: 40%;
+    }
+    /*==================== CARD ====================*/
+    .card-frontend, .card-backend {
+        width: 35%;
+    }
+    /*==================== CONTATE ME ====================*/
+    .contato-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    form input {
+        width: 350px;
     }
 }
