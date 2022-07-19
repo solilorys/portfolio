@@ -12,17 +12,17 @@
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Sobre</a></li>
-                <li><a href="/">Habilidades</a></li>
-                <li><a href="/">Projetos</a></li>
-                <li><a href="/">Contatos</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#area">Qualificações</a></li>
+                <li><a href="#contato">Contatos</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="home">
+        <section id="home">
             <div class="home-img grid">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#FF0066" d="M49.8,-58.1C66.1,-45.7,82,-31.5,87,-13.7C92.1,4,86.3,25.2,75.3,42.8C64.4,60.4,48.3,74.4,29.6,81.3C10.8,88.2,-10.5,87.9,-28.5,80.5C-46.5,73,-61.1,58.4,-67,41.8C-73,25.2,-70.2,6.6,-65.4,-9.9C-60.6,-26.5,-53.7,-41.2,-42.4,-54.4C-31.2,-67.7,-15.6,-79.7,0.6,-80.4C16.8,-81.1,33.5,-70.5,49.8,-58.1Z" transform="translate(100 100)" />
@@ -42,18 +42,18 @@
 
 
         <h1>SOBRE</h1>
-        <section class="sobre">
+        <section id="sobre">
             <div class="text">
                 <div class="sobre-text grid">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur auctor dolor quis tincidunt. Praesent eu consequat ante, nec tristique sapien. Duis fermentum nulla sed consectetur finibus.</p>
-                    <button class="button-cv">Baixar CV<i class="fa-solid fa-download"></i></button>
+                    <button class="button-cv"><a href="https://drive.google.com/file/d/1PtqIkpiOVOJde7OjEJu5BW8bmbjsB4YC/view?usp=sharing">Baixar CV</a><i class="fa-solid fa-download"></i></button>
                 </div>
             </div>
                 <img class="sobre-img" src="img/sobre.jpg">
         </section>
 
         <h1>HABILIDADES</h1>
-        <section class="card">
+        <section class="card" id="habilidades">
             <div class="card-frontend">
                 <h4>Front-end</h4>
                 <label for="">
@@ -113,7 +113,7 @@
             </div>
         </section>
 
-        <section class="qualificacao">
+        <section class="qualificacao" id="area">
             <h1 class="section-title">QUALIFICAÇÕES</h1>
     
             <div class="qualificacao-container container">
@@ -172,7 +172,7 @@
             </div>
         </section>
 
-        <section class="contato">
+        <section id="contato">
             <div class="contato-container">
                 <div class="contato-text">
                     <h2>Contate-me</h2>
@@ -222,30 +222,8 @@
         </div>
             <p class="footer-copy">&#169; Laryssa Brilhante. Todos os direitos reservados</p>
     </footer>
-
-
-
     
-<script>
-        const tabs = document.querySelectorAll('[data-target]'),
-        tabContents = document.querySelectorAll('[data-content]')
-    
-    tabs.forEach(tab =>{
-        tab.addEventListener('click', () =>{
-            const target = document.querySelector(tab.dataset.target)
-    
-            tabContents.forEach(tabContent =>{
-                tabContent.classList.remove('qualificacao-ativa')
-            })
-            target.classList.add('qualificacao-ativa')
-    
-            tabs.forEach(tab =>{
-                tab.classList.remove('qualificacao-ativa')
-            })
-            tab.classList.add('qualificacao-ativa')
-        })
-    })
-</script>
-
+<script src="js/main.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 </body>
 </html>
