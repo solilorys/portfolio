@@ -8,4 +8,4 @@ https://solilorys.github.io/portfolio/
 
 
 
-Construção do meu portfólio com HTML, CSS, JavaScript e JQuery
+Construção do meu portfólio com HTML, CSS e JavaScript puro
