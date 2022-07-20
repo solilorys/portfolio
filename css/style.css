@@ -60,7 +60,7 @@ h3 {
 
 /*==================== HOME ====================*/
 
-#home, .home-text, #sobre {
+.home, .home-text, .sobre {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,7 +194,7 @@ button {
 
 /*==================== CONTATE ME ====================*/
 
-#contato {
+.contato {
     margin-top: 3rem;
 }
 
@@ -263,12 +263,12 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-    #home, .sobre, .card, .contato-container {
+    .home, .sobre, .card, .contato-container {
         display: flex;
         flex-direction: row;
     }
 
-    #home, .section-title {
+    .home, .section-title {
         margin-top: 2rem;
     }
 
@@ -297,7 +297,7 @@ footer {
         margin-left: 5rem;
     }
     /*==================== CONTATE ME ====================*/
-    #contato {
+    .contato {
         padding-bottom: 3rem;
     }
 
@@ -329,7 +329,7 @@ footer {
         font-size: 1.3rem;
     }
 
-    #home {
+    .home {
         display: grid;
         grid-template-columns: 1fr 1fr; 
     }
@@ -376,7 +376,7 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) {
-    #home {
+    .home {
         display: grid;
         grid-template-columns: 1fr 1fr; 
     }
