@@ -9,7 +9,7 @@
     --corbutton: #FF99AC;
     --corinput: #F7CAD0;
     --corplaceholder: #989090;
-    --corfonte: #fff;
+    --corfonte: #000;
 }
 
 body {
@@ -31,6 +31,11 @@ li {
 }
 
 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main a {
     text-decoration: none;
     color: var(--corfonte);
 }
@@ -86,13 +91,14 @@ button {
     height: 3rem;
     font-size: 1em;
     font-weight: bold;
+    color: #000;
 }
 
 /*==================== CARD ====================*/
 
 .card-frontend, .card-backend {
     background-color: var(--corcard);
-    height: 380px;
+    height: 450px;
     border-radius: 10px;
     margin: 0 1rem 0 1rem;
 }
@@ -141,7 +147,7 @@ button {
     font-size: 1rem;
 }
 
-.qualificacao-button {
+button {
     cursor: pointer;
 }
 
@@ -262,14 +268,24 @@ footer {
     right: 3%;
 }
 
+@media only screen and (max-width: 768px) {
+    .form-contato {
+        margin-bottom: 2rem;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .home, .sobre, .card, .contato-container {
         display: flex;
         flex-direction: row;
     }
 
-    .home, .section-title {
+    .home {
         margin-top: 2rem;
+    }
+
+    .section-title {
+        margin-top: 6rem;
     }
 
     .home-img {
