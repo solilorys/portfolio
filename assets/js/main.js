@@ -17,3 +17,13 @@ tab.addEventListener('click', () =>{
     tab.classList.add('qualificacao-ativa')
 })
 })
+
+const btnMobile = document.querySelector(".cabecalho__button");
+
+function toggleCabecalho(event) {
+    const nav = document.querySelector(".cabecalho__nav")
+
+    nav.classList.toggle("active");
+}
+
+btnMobile.addEventListener("click", toggleCabecalho);

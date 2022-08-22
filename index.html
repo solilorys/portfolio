@@ -9,12 +9,15 @@
     <title>Laryssa Brilhante</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
+    <header class="cabecalho">
+        <nav class="cabecalho__nav">
+            <button class="cabecalho__button">
+                <span class="hamburguer"></span>
+            </button>
+            <ul class="cabecalho__lista" role="cabecalho__lista">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#skill">Habilidades</a></li>
                 <li><a href="#area">Qualificações</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -23,18 +26,18 @@
 
     <main>
         <section class="home" id="home">
-            <div class="home-img grid">
+            <div class="home__img grid">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#FF0066" d="M49.8,-58.1C66.1,-45.7,82,-31.5,87,-13.7C92.1,4,86.3,25.2,75.3,42.8C64.4,60.4,48.3,74.4,29.6,81.3C10.8,88.2,-10.5,87.9,-28.5,80.5C-46.5,73,-61.1,58.4,-67,41.8C-73,25.2,-70.2,6.6,-65.4,-9.9C-60.6,-26.5,-53.7,-41.2,-42.4,-54.4C-31.2,-67.7,-15.6,-79.7,0.6,-80.4C16.8,-81.1,33.5,-70.5,49.8,-58.1Z" transform="translate(100 100)" />
-                    <image class="home-blob-img" x="45" y="40" xlink:href="assets/img/laryssa.png">
+                    <image class="home__img__blob" x="45" y="40" xlink:href="assets/img/laryssa.png">
                   </svg>
             </div>
-            <div class="home-text grid">
+            <div class="home__text grid">
                 <h2>Olá, eu sou Laryssa Brilhante</h2>
                 <h3>Desenvolvedora Frontend</h3>
                 <p>Meu nome é Laryssa Brilhante Pessoa, tenho 19 anos e sou Desenvolvedora Front-end. Essa área foi uma das primeiras a me conquistar na faculdade e a que quero seguir! Todo desgin, código, implementação é algo incrível e espero poder fazer parte de empresas em crescimento e expandir minhas habilidades!</p>
-                <div class="home-button">
-                    <button class="button-contate-me"><a href="#contato">Contate-me<i class="fa-solid fa-paper-plane"></a></i></button>
+                <div class="home__text__button">
+                    <button class="home__button__contateme"><a href="#contato">Contate-me<i class="fa-solid fa-paper-plane"></a></i></button>
                 </div>
             </div>
 
@@ -43,17 +46,17 @@
 
         <h1>SOBRE</h1>
         <section class="sobre" id="sobre">
-            <div class="text">
-                <div class="sobre-text grid">
+            <div class="sobre__text">
+                <div class="sobre__text__detalhes grid">
                     <p>Moro no interior do Ceará, e uma das coisas que me conquistou foi a área de programação. Desde meus seis anos de idade já mexia no computador do meu pai e sempre achei incrível! Meu tio, cursou faculdade de Sistemas de Informação e por amar computadores e como eles funcionam, decidi fazer o mesmo! Foi a melhor coisa que decidi. Desde então pretendo evoluir minhas habilidades de programação no mundo profissional e educacional, sempre disposta a mudar e aprender coisas novas de diferentes pessoas, setores, áreas e locais.</p>
-                    <button class="button-cv"><a href="assets/files/Currículo Laryssa.pdf">Baixar CV</a><i class="fa-solid fa-download"></i></button>
+                    <button class="sobre__button"><a href="assets/files/Currículo Laryssa.pdf">Baixar CV</a><i class="fa-solid fa-download"></i></button>
                 </div>
             </div>
-                <img class="sobre-img" src="assets/img/sobre.jpg">
+                <img class="sobre__img" src="assets/img/sobre.jpg">
         </section>
 
         <h1>HABILIDADES</h1>
-        <section class="card" id="habilidades">
+        <section class="habilidades" id="skill">
             <div class="card-frontend">
                 <h4>Front-end</h4>
                 <label for="">
@@ -181,8 +184,8 @@
         </section>
 
         <section id="contato" class="contato">
-            <div class="contato-container">
-                <div class="contato-text">
+            <div class="contato__container">
+                <div class="contato__text">
                     <h2>Contate-me</h2>
                     <p>Preencha o formulário, caso interesse em mim, e encaminhe para o meu e-mail. Entrarei em contato o mais rápido possível!</p>
                     <p>"O trabalho vai preencher uma grande parte da sua vida, e a única maneira de ficar completamente satisfeito é fazer o que você acredita ser um bom trabalho. E a única forma de fazer um bom trabalho é amar aquilo que você faz. Se você ainda não descobriu o que é, continue procurando. Não se acomode." - Steve Jobs</p>
@@ -193,7 +196,7 @@
                     </div>
                 </div>
             
-                <div class="form-contato">
+                <div class="contato__card">
                     <div class="contato__card">
                         <img src="assets/img/marketing-de-email.png" class="contato__email" alt="icon email" srcset="">
                         <p>Fale comigo através do e-mail, só apertar no botão que vocÊ será encaminhado para o e-mail</p>

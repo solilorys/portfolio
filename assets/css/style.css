@@ -20,14 +20,9 @@ body {
 
 /*==================== HEADER ====================*/
 
-header {
+.cabecalho {
     background-color: var(--corheader);
     padding: 10px;
-}
-
-li {
-    margin: 0 3%;
-    font-size: 0.55rem;
 }
 
 a {
@@ -40,18 +35,11 @@ main a {
     color: var(--corfonte);
 }
 
-.menu {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 50%;
-    list-style-type: none;
-}
-
 /*==================== MAIN ====================*/
 
 /*==================== H ====================*/
 
-h1, h2, .home-text p, .sobre-text, h4, .qualificacao-text, .contato-text, .footer, .footer-copy {
+h1, h2, .home__text p, .sobre__text, h4, .qualificacao-text, .contato__text, .footer, .footer-copy {
     text-align: center;
 }
 
@@ -65,25 +53,25 @@ h3 {
 
 /*==================== HOME ====================*/
 
-.home, .home-text, .sobre {
+.home, .home__text, .sobre {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.home-text p, .text, .sobre-img {
+.home__text p, .sobre__text, .sobre__img {
     width: 80%;
 }
 
-.home-img {
+.home__img {
     width: 50%;
 }
 
-.home-blob-img {
+.home__img__blob {
     width: 60%;
 }
 
-button {
+.home__button__contateme, .sobre__button, .contato__button {
     background-color: var(--corbutton);
     border: none;
     border-radius: 10px;
@@ -209,7 +197,7 @@ button {
     justify-content: space-around;
 }
 
-.form-contato {
+.contato__card {
     text-align: center;
 }
 
@@ -224,29 +212,6 @@ button {
 .contato__email {
     height: 16vh;
 }
-/*
-form input {
-    background-color: var(--corinput);
-    height: 45px;
-    width: 70%;
-    border: none;
-    border-radius: 50%;
-    padding-left: 10px;
-    outline: none;
-}
-
-form input::placeholder {
-    color: var(--corplaceholder);
-}
-
-form button {
-    margin-top: 10px;
-}
-
-#mensagem {
-    height: 200px;
-}
-*/
 /*==================== FOOTER ====================*/
 
 footer {
@@ -280,14 +245,79 @@ footer {
     right: 3%;
 }
 
-@media only screen and (max-width: 768px) {
-    .form-contato {
+@media only screen and (max-width: 767px) {
+    .cabecalho__button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: flex;
+        gap: .5rem;
+        margin-left: auto;
+        padding: .5rem;
+    }
+
+    li {
+        margin: 0 3%;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .hamburguer {
+        border-top: 2px solid;
+        display: block;
+        width: 20px;
+    }
+    
+    .hamburguer::after, .hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    
+    .cabecalho__lista {
+        display: block;
+        list-style-type: none;
+        top: 35px;
+        right: 0px;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    
+    .cabecalho__nav.active .cabecalho__lista {
+        height: calc(100vh - 35px);
+        background-color: var(--corheader);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .contato__card {
         margin-bottom: 2rem;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .home, .sobre, .card, .contato-container {
+    .cabecalho__button {
+        display: none;
+    }
+    .cabecalho__lista {
+        box-sizing: border-box;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        font-size: 0.87rem;
+    }
+    .home, .sobre, .habilidades, .contato__container {
         display: flex;
         flex-direction: row;
     }
@@ -300,20 +330,20 @@ footer {
         margin-top: 6rem;
     }
 
-    .home-img {
+    .home__img {
         width: 90%;
     }
 
     /*==================== SOBRE ====================*/
-    .sobre-text, .form-contato, .contato-text {
+    .sobre__text, .contato__text {
         margin-left: auto;
         margin-right: auto;
     }
-    .sobre-text{
+    .sobre__text{
         width: 80%;
     }
 
-    .sobre-img {
+    .sobre__img {
         width: 40%;
     }
     /*==================== CARD ====================*/
@@ -328,18 +358,18 @@ footer {
     .contato {
         padding-bottom: 3rem;
     }
+    .contato__email {
+        width: 50%;
+        height: 50%;
+    }
 
-    .contato-text {
-        width: 90%;
+    .contato__text {
+        width: 50%;
         margin-left: auto;
     }
-/*
-    form input {
-        width: 120%;
-    }
-    */
 
     .contato__card {
+        padding: 0;
         width: 60%;
     }
     /*==================== FOOTER ====================*/
@@ -358,7 +388,7 @@ footer {
 }
 
 @media only screen and (min-width: 900px) {
-    .menu li {
+    .cabecalho__lista li {
         font-size: 1.3rem;
     }
 
@@ -367,19 +397,19 @@ footer {
         grid-template-columns: 1fr 1fr; 
     }
 
-    .home-button {
+    .home__text__button {
         margin-left: auto;
         margin-right: 3rem;
     }
     /*==================== SOBRE ====================*/
-    .sobre-text{
+    .sobre__text__detalhes{
         width: 60%;
     }
-    .sobre-text button {
+    .sobre__text button {
         margin-top: 1rem;
     }
     /*==================== HABILIDADES ====================*/
-    .card {
+    .habilidades {
         margin: auto;
         width: 70%;
     }
@@ -392,15 +422,15 @@ footer {
         margin-right: 5%;
     }
     /*==================== CONTATO ====================*/
-    .contato-container {
+    .contato__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .contato-text {
+    .contato__text {
         width: 60%;
         margin-top: 1rem;
     }
-    .button-contate-me {
+    .home__button__contateme {
         margin-left: 8rem;
     }
 }
@@ -410,20 +440,21 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr; 
     }
-    .home-img, .sobre-text {
+    .home__img, .sobre__text {
        width: 50%;
        justify-self: center; 
     }
-    .home-text {
+    .home__text {
         width: 70%;
     }
-    .sobre-img {
-        width: 30%;
+    .sobre__img {
+        margin-right: auto;
+        width: 25%;
     }
-    .text {
+    .sobre__text {
         width: 60%;
     }
     .contato__card {
-        width: 40%;
+        padding: .5rem;
     }
 }
