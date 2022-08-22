@@ -213,12 +213,24 @@ button {
     text-align: center;
 }
 
+.contato__card {
+    background-color: var(--corcard);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 80%;
+    margin: auto;
+}
+
+.contato__email {
+    height: 16vh;
+}
+/*
 form input {
     background-color: var(--corinput);
     height: 45px;
     width: 70%;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     padding-left: 10px;
     outline: none;
 }
@@ -234,7 +246,7 @@ form button {
 #mensagem {
     height: 200px;
 }
-
+*/
 /*==================== FOOTER ====================*/
 
 footer {
@@ -318,12 +330,17 @@ footer {
     }
 
     .contato-text {
-        width: 40%;
+        width: 90%;
         margin-left: auto;
     }
-
+/*
     form input {
         width: 120%;
+    }
+    */
+
+    .contato__card {
+        width: 60%;
     }
     /*==================== FOOTER ====================*/
     .footer {
@@ -383,9 +400,6 @@ footer {
         width: 60%;
         margin-top: 1rem;
     }
-    form input {
-        width: 25rem;
-    }
     .button-contate-me {
         margin-left: 8rem;
     }
@@ -396,21 +410,20 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr; 
     }
-
     .home-img, .sobre-text {
        width: 50%;
        justify-self: center; 
     }
-
     .home-text {
         width: 70%;
     }
-
     .sobre-img {
         width: 30%;
     }
-
     .text {
         width: 60%;
+    }
+    .contato__card {
+        width: 40%;
     }
 }
