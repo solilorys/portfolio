@@ -135,7 +135,7 @@ h3 {
     font-size: 1rem;
 }
 
-button {
+button, .qualificacao-educacao, .qualificacao-trabalho {
     cursor: pointer;
 }
 
@@ -337,7 +337,6 @@ footer {
     /*==================== SOBRE ====================*/
     .sobre__text, .contato__text {
         margin-left: auto;
-        margin-right: auto;
     }
     .sobre__text{
         width: 80%;
@@ -429,6 +428,7 @@ footer {
     .contato__text {
         width: 60%;
         margin-top: 1rem;
+        margin-right: auto;
     }
     .home__button__contateme {
         margin-left: 8rem;
