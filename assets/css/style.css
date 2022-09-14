@@ -118,13 +118,16 @@ h3 {
     width: 90%;
 }
 .progresso-js span {
-    width: 30%;
+    width: 50%;
 }
 .progresso-bt span, .progresso-wordpress span {
     width: 50%;
 }
 .progresso-python span {
     width: 40%;
+}
+.progresso-java span {
+    width: 25%;
 }
 
 /*==================== QUALIFICACOES ====================*/
